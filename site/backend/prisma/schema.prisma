@@ -1,0 +1,58 @@
+model User {
+  id        Int      @id @default(autoincrement())
+  username  String   @unique
+  password  String
+  repos     Repo[]
+  issues    Issue[]
+  pulls     Pull[]   @relation("PullAuthor")
+  createdAt DateTime @default(now())
+}
+
+model Repo {
+  id        Int      @id @default(autoincrement())
+  name      String
+  owner     User     @relation(fields: [ownerId], references: [id])
+  ownerId   Int
+  isPrivate Boolean  @default(false)
+  pulls     Pull[]
+  issues    Issue[]
+  createdAt DateTime @default(now())
+  @@unique([ownerId, name])
+}
+
+model Pull {
+  id        Int      @id @default(autoincrement())
+  title     String
+  body      String?
+  status    String   @default("open") // open / closed / merged
+  repo      Repo     @relation(fields: [repoId], references: [id])
+  repoId    Int
+  author    User     @relation("PullAuthor", fields: [authorId], references: [id])
+  authorId  Int
+  base      String   // ветка «куда»
+  head      String   // ветка «откуда»
+  createdAt DateTime @default(now())
+}
+
+model Issue {
+  id        Int      @id @default(autoincrement())
+  title     String
+  body      String?
+  status    String   @default("open")
+  repo      Repo     @relation(fields: [repoId], references: [id])
+  repoId    Int
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
+  createdAt DateTime @default(now())
+}
+
+model WikiPage {
+  id        Int      @id @default(autoincrement())
+  repo      Repo     @relation(fields: [repoId], references: [id])
+  repoId    Int
+  slug      String
+  title     String
+  content   String
+  updatedAt DateTime @updatedAt
+  @@unique([repoId, slug])
+}

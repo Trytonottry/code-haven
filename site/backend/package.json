@@ -1,0 +1,20 @@
+{
+  "name": "gitmvp-backend",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.19",
+    "cors": "^2.8",
+    "dotenv": "^16.4",
+    "bcryptjs": "^2.4",
+    "jsonwebtoken": "^9.0",
+    "pg": "^8.11",
+    "simple-git": "^3.24",
+    "multer": "^1.4"
+  },
+  "devDependencies": { "nodemon": "^3.0" }
+}

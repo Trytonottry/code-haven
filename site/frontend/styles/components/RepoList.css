@@ -1,0 +1,19 @@
+/* styles/components/RepoList.css */
+.repo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.repo-list li {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.repo-list li a {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}

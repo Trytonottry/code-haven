@@ -1,0 +1,7 @@
+/* styles/components/MarkdownEditor.css */
+.markdown-editor {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}

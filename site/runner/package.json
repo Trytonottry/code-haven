@@ -1,0 +1,9 @@
+{
+  "name": "gitmvp-runner",
+  "type": "module",
+  "main": "worker.js",
+  "dependencies": {
+    "simple-git": "^3.24",
+    "axios": "^1.7"
+  }
+}
