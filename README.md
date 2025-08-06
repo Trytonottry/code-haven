@@ -61,12 +61,12 @@ The project is divided into several main components:
 #### Backend
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/gitapp.git
+git clone https://github.com/Trytonottry/code-haven.git
 ```
 
 2. Navigate to the backend directory:
 ```bash
-cd gitapp/backend
+cd code-haven/site/backend
 ```
 
 3. Install dependencies:
@@ -88,7 +88,7 @@ npm run dev
 
 1. Navigate to the frontend directory:
 ```bash
-cd gitapp/frontend
+cd code-haven/site/frontend
 ```
 
 2. Install dependencies:
@@ -105,7 +105,7 @@ npm run dev
 
 1. Navigate to the mobile app directory:
 ```bash
-cd gitapp/mobile
+cd codehaven/app
 ```
 
 2. Install dependencies:
