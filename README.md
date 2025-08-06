@@ -105,7 +105,7 @@ npm run dev
 
 1. Navigate to the mobile app directory:
 ```bash
-cd codehaven/app
+cd code-haven/app
 ```
 
 2. Install dependencies:
